@@ -1,0 +1,159 @@
+:root {
+  color-scheme: light;
+  background: #fff;
+  color: #111;
+  font-family: ui-serif, Georgia, "Noto Serif CJK SC", "Noto Serif SC", "Songti SC", serif;
+  font-size: 18px;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+html { overflow-wrap: break-word; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+main {
+  width: min(100% - 2.5rem, 44rem);
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover { text-decoration-thickness: 2px; }
+
+a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+.article-list {
+  margin: 0;
+  padding-left: 1.7rem;
+}
+
+.article-list li { margin: 0 0 0.85rem; }
+
+.article-list a { text-decoration: none; }
+.article-list a:hover { text-decoration: underline; }
+
+nav {
+  margin-bottom: 3rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1.35rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+article > :first-child { margin-top: 0; }
+article > :last-child { margin-bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 2.2em 0 0.65em;
+  line-height: 1.25;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.55rem; }
+h3 { font-size: 1.25rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+p, ul, ol, blockquote, pre, table, figure, details { margin: 1.2em 0; }
+ul, ol { padding-left: 1.5em; }
+li + li { margin-top: 0.3em; }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 2px solid #111;
+}
+
+blockquote > :first-child { margin-top: 0; }
+blockquote > :last-child { margin-bottom: 0; }
+
+hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid #111;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #111;
+  text-align: left;
+}
+
+code, pre, kbd {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.88em;
+}
+
+:not(pre) > code, kbd {
+  padding: 0.1em 0.28em;
+  border: 1px solid #111;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid #111;
+  line-height: 1.55;
+}
+
+pre code { font-size: 0.82rem; }
+.hljs { background: transparent; color: #111; }
+.hljs-comment, .hljs-quote { color: #666; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link { font-weight: 700; }
+.hljs-string, .hljs-title, .hljs-name, .hljs-type, .hljs-attribute, .hljs-symbol, .hljs-bullet, .hljs-addition { text-decoration: underline; text-decoration-color: #aaa; }
+.hljs-deletion { text-decoration: line-through; }
+
+.task-list-item { list-style: none; }
+.task-list-item input { margin: 0 0.55em 0 -1.35em; accent-color: #111; }
+
+.footnotes {
+  margin-top: 3rem;
+  border-top: 1px solid #111;
+  font-size: 0.9rem;
+}
+
+sup { line-height: 0; }
+
+@media (max-width: 36rem) {
+  :root { font-size: 17px; }
+  main { width: min(100% - 2rem, 44rem); padding-top: 2rem; }
+  nav { margin-bottom: 2rem; }
+  h1 { font-size: 1.7rem; }
+}
+
+@media print {
+  main { width: 100%; padding: 0; }
+  nav { display: none; }
+}
