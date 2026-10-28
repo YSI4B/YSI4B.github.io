@@ -85,6 +85,19 @@ blockquote {
 blockquote > :first-child { margin-top: 0; }
 blockquote > :last-child { margin-bottom: 0; }
 
+.markdown-alert { border-left-width: 4px; }
+.markdown-alert-title { font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 700; }
+.markdown-alert-note { border-color: #0969da; }
+.markdown-alert-note > .markdown-alert-title { color: #0969da; }
+.markdown-alert-tip { border-color: #1a7f37; }
+.markdown-alert-tip > .markdown-alert-title { color: #1a7f37; }
+.markdown-alert-important { border-color: #8250df; }
+.markdown-alert-important > .markdown-alert-title { color: #8250df; }
+.markdown-alert-warning { border-color: #9a6700; }
+.markdown-alert-warning > .markdown-alert-title { color: #9a6700; }
+.markdown-alert-caution { border-color: #cf222e; }
+.markdown-alert-caution > .markdown-alert-title { color: #cf222e; }
+
 hr {
   margin: 3rem 0;
   border: 0;

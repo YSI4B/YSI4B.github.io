@@ -7,6 +7,7 @@ import MarkdownIt from "markdown-it";
 import anchor from "markdown-it-anchor";
 import footnote from "markdown-it-footnote";
 import taskLists from "markdown-it-task-lists";
+import alerts from "./markdown-alerts.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const articleDir = path.join(root, "article");
@@ -73,7 +74,8 @@ const md = new MarkdownIt({
 })
   .use(anchor, { permalink: false, slugify: (value) => value.trim().toLowerCase().replace(/\s+/g, "-") })
   .use(footnote)
-  .use(taskLists, { enabled: false, label: true, labelAfter: true });
+  .use(taskLists, { enabled: false, label: true, labelAfter: true })
+  .use(alerts);
 
 function firstHeading(markdown) {
   const tokens = md.parse(markdown, {});
@@ -155,7 +157,7 @@ const list = articles.length
   ? `<ol class="article-list">${articles.map((article) => `\n    <li><a href="${basePath}articles/${article.slug}/">${escapeHtml(article.title)}</a></li>`).join("")}\n  </ol>`
   : `<p>还没有文章。</p>`;
 await writeFile(path.join(outputDir, "index.html"), page({
-  title: "文章",
+  title: "沈阳建筑大学袁帅教授傻逼时刻合订本",
   description: "文章列表",
   body: list,
   className: "index-page"
